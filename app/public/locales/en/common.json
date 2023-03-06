@@ -1,0 +1,10 @@
+{
+  "price": "Price",
+  "products": {
+    "title": "Products"
+  },
+  "basket": {
+    "title": "Basket",
+    "empty": "Your basket is empty"
+  }
+}

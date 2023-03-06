@@ -1,0 +1,10 @@
+{
+  "price": "Prezzo",
+  "products": {
+    "title": "Prodotti"
+  },
+  "basket": {
+    "title": "Carrello",
+    "empty": "Il tuo carrello è vuoto"
+  }
+}
