@@ -21,7 +21,7 @@ export default function DesktopProductsPage() {
     </Box>
 
     <Box sx={{
-      width: '35%',
+      width: '30%',
       marginLeft: '30px'
     }}>
       <Basket />

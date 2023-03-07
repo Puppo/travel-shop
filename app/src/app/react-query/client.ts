@@ -6,9 +6,7 @@ export const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       cacheTime: 15 * 60 * 1000, // 15 minutes
-      refetchOnMount: false,
       refetchOnWindowFocus: false,
-      refetchOnReconnect: false,
       onError: (error) => {
         trackError(error);
       },

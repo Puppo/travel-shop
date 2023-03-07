@@ -9,7 +9,6 @@ import { queryClient } from './react-query/client';
 import { router } from './router';
 
 import { RouterProvider } from 'react-router-dom';
-import './app.module.scss';
 import { AppBar } from './components/AppBar';
 
 const theme = createTheme();

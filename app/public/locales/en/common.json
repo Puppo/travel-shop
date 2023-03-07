@@ -3,10 +3,17 @@
   "products": {
     "title": "Products"
   },
+  "product": {
+    "addToCart": "Add To Basket",
+    "back": "Go to Products"
+  },
   "basket": {
     "title": "Basket",
     "empty": "Your basket is empty",
     "total": "Total",
     "checkout": "Checkout"
+  },
+  "appBar": {
+    "basketCount": "There are {{ total }} products in the basket"
   }
 }

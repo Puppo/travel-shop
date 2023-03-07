@@ -1,7 +1,10 @@
 export const EVENTS = Object.freeze({
-  NAV_BAR: {
+  NAVIGATION: {
     BASKET: {
-      TOGGLE: 'NAV_BAR_BASKET_TOGGLE',
+      TOGGLE: 'NAVIGATION_BASKET_TOGGLE',
+    },
+    PRODUCTS: {
+      GOTO: 'NAVIGATION_PRODUCTS_GOTO',
     },
   },
   PRODUCT: {

@@ -31,7 +31,7 @@ const DB: Db = {
       id: i + 1,
       title: faker.address.country(),
       description: faker.lorem.paragraph(),
-      image: faker.image.city(),
+      image: `https://picsum.photos/1280/1280.webp?random=${faker.datatype.uuid()}`,
       price: faker.datatype.number({
         min: 70,
         max: 500,

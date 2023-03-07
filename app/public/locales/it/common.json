@@ -3,10 +3,17 @@
   "products": {
     "title": "Prodotti"
   },
+  "product": {
+    "addToCart": "Aggiungi al Carrello",
+    "back": "Torna ai prodotti"
+  },
   "basket": {
     "title": "Carrello",
     "empty": "Il tuo carrello è vuoto",
     "total": "Totale",
     "checkout": "Checkout"
+  },
+  "appBar": {
+    "basketCount": "Ci sono {{ total }} prodotti nel carrello"
   }
 }

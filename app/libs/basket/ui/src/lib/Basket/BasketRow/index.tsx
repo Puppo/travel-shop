@@ -16,7 +16,7 @@ interface BasketRowProps {
 export function BasketRow({ item }: BasketRowProps) {
   const { basket } = useGetBasket();
   const removeProductFromBasketMutation = useRemoveProductFromBasket();
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common']);
 
   const removeProductFromBasket = useCallback((e: MouseEvent) => {
     e.preventDefault();

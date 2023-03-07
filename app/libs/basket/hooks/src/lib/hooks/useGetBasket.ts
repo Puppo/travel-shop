@@ -28,7 +28,6 @@ interface UseGetBasketResult {
 
 export function useGetBasket(): UseGetBasketResult {
   const {
-    // @ts-ignore
     data: basket,
     isLoading,
     error,
@@ -36,9 +35,14 @@ export function useGetBasket(): UseGetBasketResult {
     isLoading: boolean;
     data?: Basket | null;
     error?: unknown;
-  } = useQuery([QUERY_KEYS.BASKET], () => getBasketRequest(basket), {
-    initialData: getStoredBasket(),
-  });
+  } = useQuery(
+    [QUERY_KEYS.BASKET],
+    ({ signal }) => getBasketRequest(basket, signal),
+    {
+      initialData: getStoredBasket(),
+      staleTime: 0,
+    }
+  );
 
   useEffect(() => {
     if (!basket) clearStoredBasket();

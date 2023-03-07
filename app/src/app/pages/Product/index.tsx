@@ -1,15 +1,19 @@
 
 import { useDevice } from "@travel-shop-app/utils";
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 
-const DesktopProductPage = lazy(() => import("./Desktop"));
-const MobileProductPage = lazy(() => import("./Mobile"));
+const DesktopProductPage = lazy(() => import("@travel-shop-app/products/ui").then((module) => ({ default: module.DesktopProductPage })));
+const MobileProductPage = lazy(() => import("@travel-shop-app/products/ui").then((module) => ({ default: module.MobileProductPage })));
 
 export default function ProductsPage() {
   const { isDesktop } = useDevice();
 
   if (isDesktop)
-    return <DesktopProductPage />
+    return <Suspense>
+      <DesktopProductPage />
+    </Suspense>
 
-  return <MobileProductPage />
+  return <Suspense>
+    <MobileProductPage />
+  </Suspense>
 }

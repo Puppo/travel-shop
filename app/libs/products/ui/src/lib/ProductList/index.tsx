@@ -1,22 +1,22 @@
 import Box from '@mui/material/Box';
-import { useTranslation } from 'react-i18next';
 
 import { useGetProducts } from "@travel-shop-app/products/hooks";
 import { ProductListItem } from './ProductListItem';
 
-import styles from './index.module.scss';
+import { Loader } from '@travel-shop-app/shared/ui';
 
 
 export function ProductList() {
-  const { t } = useTranslation(['common'])
   const { products, isLoading } = useGetProducts();
 
   return (
     <Box>
-      <Box itemType="main">
-        {isLoading && <p>Loading...</p>}
+      <Box component="main">
+        {isLoading && <Loader />}
 
-        <Box itemType='ul' className={styles['list-container']}>
+        <Box component="ul" sx={{
+          all: 'unset',
+        }}>
           {products.map((item) => (
             <ProductListItem key={item.id} item={item} />
           ))}

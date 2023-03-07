@@ -1,17 +1,17 @@
 
+import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Card from "@mui/material/Card";
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Price } from "@travel-shop-app/shared/ui";
 import { useTranslation } from 'react-i18next';
 import LinesEllipsis from 'react-lines-ellipsis';
 import { Link } from "react-router-dom";
 
+
 import { Product } from "@travel-shop-app/products/models";
-import styles from './index.module.scss';
 
 interface ProductListItemProps {
   item: Product;
@@ -20,52 +20,58 @@ interface ProductListItemProps {
 export function ProductListItem({ item }: ProductListItemProps) {
   const { t } = useTranslation(['common'])
 
-  return <li className={styles['container']}>
+  return <Box component="li" sx={{
+    all: "unset"
+  }}>
     <Card sx={{
       borderRadius: 0,
       marginBottom: '5px',
       display: 'flex',
       flexDirection: 'row',
     }}>
-      <CardMedia
-        component="img"
-        sx={{
-          width: '150px',
-          height: '150px',
-        }}
-        image={item.image}
-        alt={item.title}
-      />
+      <picture>
+        <source type='image/webp' src={item.image} />
+        <img
+          loading='lazy'
+          width='150px'
+          height='150px'
+          style={{ height: 'auto', objectFit: 'cover' }}
+          src={item.image}
+          decoding='async'
+          alt={item.title}
+        />
+      </picture>
       <CardContent sx={{
         flex: 1
       }}>
         <Typography gutterBottom variant="h6" component="div">
-          {item.title}
+          <LinesEllipsis
+            text={item.title}
+            maxLine='1'
+            ellipsis='...'
+            trimRight
+            basedOn='letters'
+          />
         </Typography>
         <Typography gutterBottom variant="h5" component="div">
           <Price value={item.price} />
         </Typography>
-        <Typography variant="body2" color="text.secondary" sx={{
-          height: '40px',
-          overflow: 'hidden',
-        }}>
+        <Typography component="div" variant="body2" color="text.secondary">
           <LinesEllipsis
             text={item.description}
-            maxLine='3'
+            maxLine='2'
             ellipsis='...'
             trimRight
             basedOn='letters'
           />
         </Typography>
       </CardContent>
-      <CardActions sx={{
-        justifyContent: 'flex-end'
-      }}>
+      <CardActions>
         <Button component={Link} to={`/products/${item.id}`} size="small" color="primary">
           {t('more')}
         </Button>
       </CardActions>
     </Card>
-  </li>
+  </Box>
 
 }

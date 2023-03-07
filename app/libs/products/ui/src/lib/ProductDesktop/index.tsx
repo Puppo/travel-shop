@@ -2,23 +2,20 @@ import { styled } from "@mui/material";
 import Dialog from "@mui/material/Dialog";
 import DialogContent from "@mui/material/DialogContent";
 import { EVENTS, useEventBusSubscriber } from "@travel-shop-app/utils";
-import { Suspense, lazy } from "react";
 import { useNavigate } from "react-router-dom";
-
-const Product = lazy(() => import("@travel-shop-app/products/ui").then((module) => ({ default: module.Product })));
-
+import { Product } from "../Product";
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
   '& .MuiDialogContent-root': {
-    padding: theme.spacing(2),
+    padding: theme.spacing(0),
   },
   '& .MuiDialogActions-root': {
-    padding: theme.spacing(1),
+    padding: theme.spacing(0),
   },
 }));
 
 
-export default function DesktopProductPage() {
+export function DesktopProductPage() {
   const navigate = useNavigate();
 
   useEventBusSubscriber(EVENTS.PRODUCT.ADDED, () => {
@@ -36,9 +33,7 @@ export default function DesktopProductPage() {
     open={true}
   >
     <DialogContent dividers>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Product />
-      </Suspense>
+      <Product />
     </DialogContent>
   </BootstrapDialog>
 }

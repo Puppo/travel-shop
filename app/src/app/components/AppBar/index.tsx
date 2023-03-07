@@ -8,14 +8,16 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { useGetBasket } from '@travel-shop-app/basket/hooks';
 import { EVENTS, useEventBusEmitter } from '@travel-shop-app/utils';
+import { useTranslation } from 'react-i18next';
 
 export function AppBar() {
+  const { t } = useTranslation(['common']);
   const { basket } = useGetBasket();
 
   const { emit: emitToBus } = useEventBusEmitter();
 
   const handleBasketClick = () => {
-    emitToBus(EVENTS.NAV_BAR.BASKET.TOGGLE);
+    emitToBus(EVENTS.NAVIGATION.BASKET.TOGGLE);
   }
 
   return <Box sx={{ flexGrow: 1 }}>
@@ -34,10 +36,10 @@ export function AppBar() {
 
 
         <Box sx={{ flexGrow: 1 }} />
-        <Box sx={{ display: { xs: 'flex', md: 'flex', lg: 'none' } }}>
+        <Box sx={{ display: { xs: 'flex', sm: 'flex', md: 'none' } }}>
           <IconButton
             size="large"
-            aria-label={`show ${basket?.items?.length || 0} new mails`}
+            aria-label={t('appBar.basketCount', { total: basket?.items?.length || 0 })!}
             color="inherit"
             onClick={handleBasketClick}
           >
