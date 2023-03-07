@@ -1,10 +1,11 @@
 {
   "price": "Price",
   "products": {
-    "title": "Products"
+    "title": "Products",
+    "more": "More"
   },
   "product": {
-    "addToCart": "Add To Basket",
+    "addToCart": "Add",
     "back": "Go to Products"
   },
   "basket": {

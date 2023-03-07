@@ -1,17 +1,22 @@
 
+import MoreIcon from '@mui/icons-material/MoreVert';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
-import { Badge } from '@mui/material';
 import MuiAppBar from '@mui/material/AppBar';
+import Badge from '@mui/material/Badge';
 import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { useGetBasket } from '@travel-shop-app/basket/hooks';
-import { EVENTS, useEventBusEmitter } from '@travel-shop-app/utils';
+import { EVENTS, LANGUAGES, useEventBusEmitter } from '@travel-shop-app/utils';
+import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 export function AppBar() {
-  const { t } = useTranslation(['common']);
+  const { t, i18n: { changeLanguage } } = useTranslation(['common']);
+  const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const { basket } = useGetBasket();
 
   const { emit: emitToBus } = useEventBusEmitter();
@@ -19,6 +24,19 @@ export function AppBar() {
   const handleBasketClick = () => {
     emitToBus(EVENTS.NAVIGATION.BASKET.TOGGLE);
   }
+
+  const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const handleChangeLanguage = (lang: Language) => {
+    changeLanguage(lang.code)
+    setAnchorEl(null);
+  };
 
   return <Box sx={{ flexGrow: 1 }}>
     <MuiAppBar
@@ -47,6 +65,34 @@ export function AppBar() {
               <ShoppingCartIcon />
             </Badge>
           </IconButton>
+        </Box>
+        <Box>
+          <IconButton
+            size="large"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleMenu}
+            color="inherit"
+          >
+            <MoreIcon />
+          </IconButton>
+          <Menu
+            id="menu-appbar"
+            anchorEl={anchorEl}
+            anchorOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'right',
+            }}
+            open={Boolean(anchorEl)}
+            onClose={handleClose}
+          >
+            {LANGUAGES.map((lang) => <MenuItem key={lang.code} onClick={() => handleChangeLanguage(lang)}>{lang.label}</MenuItem>)}
+          </Menu>
         </Box>
       </Toolbar>
     </MuiAppBar>

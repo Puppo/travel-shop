@@ -1,10 +1,11 @@
 {
   "price": "Prezzo",
   "products": {
-    "title": "Prodotti"
+    "title": "Prodotti",
+    "more": "Mostra"
   },
   "product": {
-    "addToCart": "Aggiungi al Carrello",
+    "addToCart": "Aggiungi",
     "back": "Torna ai prodotti"
   },
   "basket": {

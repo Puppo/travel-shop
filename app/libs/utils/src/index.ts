@@ -5,4 +5,6 @@ export { useEventBusEmitter } from './lib/hooks/useEventBusEmitter';
 export { useEventBusSubscriber } from './lib/hooks/useEventBusSubscriber';
 export { useParamsTypeSafe } from './lib/hooks/useParamsTypeSafe';
 export { httpClient } from './lib/httpClient';
+export { LANGUAGES } from './lib/languages';
+export type { Language } from './lib/languages';
 export { validation } from './lib/validation';

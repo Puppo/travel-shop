@@ -1,0 +1,21 @@
+{
+  "price": "Precio",
+  "products": {
+    "title": "Productos",
+    "more": "Muestra"
+  },
+  "product": {
+    "addToCart": "Añade",
+    "back": "Productos"
+  },
+  "basket": {
+    "title": "Carrito",
+    "empty": "Tu carrito está vacío",
+    "total": "Total",
+    "checkout": "Checkout",
+    "back": "Vuelve"
+  },
+  "appBar": {
+    "basketCount": "Hay {{ total }} productos en el carrito"
+  }
+}

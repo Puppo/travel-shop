@@ -68,7 +68,7 @@ export function ProductListItem({ item }: ProductListItemProps) {
       </CardContent>
       <CardActions>
         <Button component={Link} to={`/products/${item.id}`} size="small" color="primary">
-          {t('more')}
+          {t('products.more')}
         </Button>
       </CardActions>
     </Card>
