@@ -31,6 +31,8 @@ The developer experience is crucial too, so the developers can reduce the time t
 
 You can find more detail about the technologies [here](./Technologies/README.md)
 
-## Process and Tools
+## Processes
+
+About the processes, you can find more detail [here](./Processes/README.md)
 
 ## Implementation
