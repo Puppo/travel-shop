@@ -11,7 +11,8 @@
     "title": "Carrello",
     "empty": "Il tuo carrello è vuoto",
     "total": "Totale",
-    "checkout": "Checkout"
+    "checkout": "Checkout",
+    "back": "Torna indietro"
   },
   "appBar": {
     "basketCount": "Ci sono {{ total }} prodotti nel carrello"

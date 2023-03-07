@@ -1,4 +1,6 @@
 
+import { BasketMobile } from "@travel-shop-app/basket/ui";
+import { ProductList } from "@travel-shop-app/products/ui";
 import { EVENTS, useEventBusSubscriber } from "@travel-shop-app/utils";
 import { ReactElement, useEffect, useState } from "react";
 import { useOutlet } from "react-router-dom";
@@ -16,11 +18,6 @@ export default function MobileProductsPage(): ReactElement | null {
     setView('basket')
   })
 
-  useEventBusSubscriber(EVENTS.NAVIGATION.PRODUCTS.GOTO, () => {
-    if (view === 'products') return;
-    setView('products')
-  })
-
   useEffect(() => {
     if (view === 'basket') return;
     setView(outlet ? 'product' : 'products')
@@ -29,10 +26,10 @@ export default function MobileProductsPage(): ReactElement | null {
 
   switch (view) {
     case 'products':
-      return
+      return <ProductList />
     case 'product':
       return outlet;
     case 'basket':
-      return
+      return <BasketMobile />
   }
 }

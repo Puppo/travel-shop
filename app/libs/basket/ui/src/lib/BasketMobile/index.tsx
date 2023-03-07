@@ -9,8 +9,8 @@ export function BasketMobile() {
   const { t } = useTranslation('common');
   const { emit: sendMessageToBus } = useEventBusEmitter();
 
-  const onGoToProducts = useCallback(() => {
-    sendMessageToBus(EVENTS.NAVIGATION.PRODUCTS.GOTO);
+  const onGoBack = useCallback(() => {
+    sendMessageToBus(EVENTS.NAVIGATION.BASKET.TOGGLE);
   }, [sendMessageToBus]);
 
   return (
@@ -26,7 +26,7 @@ export function BasketMobile() {
         }}
       >
         <Button
-          onClick={onGoToProducts}
+          onClick={onGoBack}
           variant="outlined"
           size="large"
           color="primary"
@@ -34,7 +34,7 @@ export function BasketMobile() {
             width: '180px',
           }}
         >
-          {t('product.back')}
+          {t('basket.back')}
         </Button>
       </Box>
     </Box>

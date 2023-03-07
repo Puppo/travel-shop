@@ -11,7 +11,8 @@
     "title": "Basket",
     "empty": "Your basket is empty",
     "total": "Total",
-    "checkout": "Checkout"
+    "checkout": "Checkout",
+    "back": "Go back"
   },
   "appBar": {
     "basketCount": "There are {{ total }} products in the basket"
