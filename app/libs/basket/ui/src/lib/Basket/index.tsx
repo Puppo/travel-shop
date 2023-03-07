@@ -42,7 +42,7 @@ export function Basket() {
         </Box>
 
         {
-          total && <Box component="footer" sx={{
+          !!total && <Box component="footer" sx={{
             display: 'flex',
             flexDirection: 'column',
           }}>

@@ -1,4 +1,4 @@
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { Basket } from '@travel-shop-app/basket/models';
 import { httpClient } from '@travel-shop-app/utils';
 import { useEffect } from 'react';
@@ -27,6 +27,8 @@ interface UseGetBasketResult {
 }
 
 export function useGetBasket(): UseGetBasketResult {
+  const queryClient = useQueryClient();
+
   const {
     data: basket,
     isLoading,
@@ -39,7 +41,7 @@ export function useGetBasket(): UseGetBasketResult {
     [QUERY_KEYS.BASKET],
     ({ signal }) => getBasketRequest(basket, signal),
     {
-      initialData: getStoredBasket(),
+      initialData: getStoredBasket,
       staleTime: 0,
     }
   );

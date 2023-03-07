@@ -67,6 +67,7 @@ export function Product() {
         decoding='async'
         srcSet={product.image}
         title={product.title}
+        height={300}
       />
       <CardContent>
         <Box component="div">

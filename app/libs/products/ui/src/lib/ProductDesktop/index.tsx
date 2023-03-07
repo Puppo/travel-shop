@@ -31,6 +31,10 @@ export function DesktopProductPage() {
     onClose={handleClose}
     aria-labelledby="customized-dialog-title"
     open={true}
+    sx={{
+      width: '450px',
+      margin: 'auto'
+    }}
   >
     <DialogContent dividers>
       <Product />
