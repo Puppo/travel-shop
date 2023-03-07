@@ -1,0 +1,56 @@
+<mxfile host="65bd71144e">
+    <diagram id="DjAh7d_Hv9koKjloVGt1" name="Desktop">
+        <mxGraphModel dx="669" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="jOvwUHeN-txElj9jPcHw-1" value="Open" style="edgeStyle=none;html=1;entryX=0.009;entryY=0.573;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="jOvwUHeN-txElj9jPcHw-2" target="jOvwUHeN-txElj9jPcHw-4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="jOvwUHeN-txElj9jPcHw-2" value="Product List" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f9f7ed;strokeColor=#36393d;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="80" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="jOvwUHeN-txElj9jPcHw-3" value="Add Product" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="jOvwUHeN-txElj9jPcHw-4" target="jOvwUHeN-txElj9jPcHw-5" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <Array as="points"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="jOvwUHeN-txElj9jPcHw-4" value="Product Detail" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f9f7ed;strokeColor=#36393d;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="300" y="280" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="jOvwUHeN-txElj9jPcHw-5" value="Basket" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f9f7ed;strokeColor=#36393d;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="480" y="80" width="120" height="120" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="4wMw7QC9oLJbHQpY5VuY" name="Mobile">
+        <mxGraphModel dx="669" dy="461" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="6" value="Open" style="edgeStyle=none;html=1;entryX=0.009;entryY=0.573;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="2" target="3" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Product List" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f9f7ed;strokeColor=#36393d;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="200" y="190" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="Add Product" style="edgeStyle=none;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="3" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Product Detail" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f9f7ed;strokeColor=#36393d;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="360" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="Basket" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f9f7ed;strokeColor=#36393d;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="640" y="190" width="120" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Toggle" style="edgeStyle=none;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.582;entryY=0.009;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="9" target="4" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="NavBar" style="whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f9f7ed;strokeColor=#36393d;fontColor=#000000;" parent="1" vertex="1">
+                    <mxGeometry x="400" y="40" width="120" height="120" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
