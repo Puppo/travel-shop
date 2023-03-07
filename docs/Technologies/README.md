@@ -30,3 +30,6 @@ Other technologies are:
 
 - react-router-dom: probably the best option to implement the routing in react
 - zod: a library to validate the data, this helps to have a better control of the data and to avoid errors, the combo zod and typescript is awesome
+- vitest: for the unit testing, it's a good option to have a fast and reliable test
+- playwright: for the e2e testing
+- newrelic for the observability of the application

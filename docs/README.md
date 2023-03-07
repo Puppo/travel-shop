@@ -36,3 +36,9 @@ You can find more detail about the technologies [here](./Technologies/README.md)
 About the processes, you can find more detail [here](./Processes/README.md)
 
 ## Implementation
+
+You can find a prototype of the project in the folder app.
+
+To run the project, you need to run the [app](../app/README.md) and [api](../api/README.md) projects.
+
+p.s. if you kill the api you have to clear the local storage of the browser otherwise the are problem with the basket, becuase the basket is stored in the local storage and in the memory in the fake api
