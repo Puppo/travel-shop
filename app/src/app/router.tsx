@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 import {
   Navigate,
   createBrowserRouter
@@ -10,16 +10,17 @@ const ProductPage = lazy(() => import("./pages/Product"));
 export const router = createBrowserRouter([
   {
     path: "/products",
-    element: <ProductsPage />,
+    element: <Suspense><ProductsPage /></Suspense>,
     children: [
       {
         path: ":productId",
-        element: <ProductPage />,
+        element: <Suspense><ProductPage /></Suspense>,
       }
     ]
   },
   {
     path: "*",
-    element: <Navigate to="/products" replace />
+    element:
+      <Navigate to="/products" replace />
   }
 ]);

@@ -16,7 +16,7 @@
       ],
       "rules": {
         "@nrwl/nx/enforce-module-boundaries": [
-          "warning",
+          "error",
           {
             "enforceBuildableLibDependency": true,
             "allow": [],

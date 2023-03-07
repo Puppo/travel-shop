@@ -5,6 +5,8 @@
   },
   "basket": {
     "title": "Basket",
-    "empty": "Your basket is empty"
+    "empty": "Your basket is empty",
+    "total": "Total",
+    "checkout": "Checkout"
   }
 }

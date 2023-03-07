@@ -5,6 +5,8 @@
   },
   "basket": {
     "title": "Carrello",
-    "empty": "Il tuo carrello è vuoto"
+    "empty": "Il tuo carrello è vuoto",
+    "total": "Totale",
+    "checkout": "Checkout"
   }
 }

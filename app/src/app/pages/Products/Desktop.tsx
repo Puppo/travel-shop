@@ -1,11 +1,10 @@
 
-// import { Product, Products } from "@travel-shop-app/products";
 import { Box } from "@mui/material";
 import { Suspense, lazy } from "react";
 import { useOutlet } from "react-router-dom";
 
-const Basket = lazy(() => import("@travel-shop-app/basket").then((module) => ({ default: module.Basket })));
-const Products = lazy(() => import("@travel-shop-app/products").then((module) => ({ default: module.ProductList })));
+const Basket = lazy(() => import("@travel-shop-app/basket/ui").then((module) => ({ default: module.Basket })));
+const Products = lazy(() => import("@travel-shop-app/products/ui").then((module) => ({ default: module.ProductList })));
 
 export default function DesktopProductsPage() {
   const outlet = useOutlet();

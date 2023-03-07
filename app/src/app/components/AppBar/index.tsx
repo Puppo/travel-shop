@@ -6,8 +6,8 @@ import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
+import { useGetBasket } from '@travel-shop-app/basket/hooks';
 import { EVENTS, useEventBusEmitter } from '@travel-shop-app/utils';
-import { useGetBasket } from 'libs/basket/src/lib/hooks/useGetBasket';
 
 export function AppBar() {
   const { basket } = useGetBasket();

@@ -15,10 +15,14 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@travel-shop-app/basket": ["libs/basket/src/index.ts"],
-      "@travel-shop-app/products": ["libs/products/src/index.ts"],
-      "@travel-shop-app/shared": ["libs/shared/src/index.ts"],
-      "@travel-shop-app/utils": ["libs/utils/src/index.ts"]
+      "@travel-shop-app/basket/hooks": ["libs/basket/hooks/src/index.ts"],
+      "@travel-shop-app/basket/models": ["libs/basket/models/src/index.ts"],
+      "@travel-shop-app/basket/ui": ["libs/basket/ui/src/index.ts"],
+      "@travel-shop-app/utils": ["libs/utils/src/index.ts"],
+      "@travel-shop-app/products/hooks": ["libs/products/hooks/src/index.ts"],
+      "@travel-shop-app/products/models": ["libs/products/models/src/index.ts"],
+      "@travel-shop-app/products/ui": ["libs/products/ui/src/index.ts"],
+      "@travel-shop-app/shared/ui": ["libs/shared/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

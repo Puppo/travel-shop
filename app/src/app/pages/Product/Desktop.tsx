@@ -5,7 +5,7 @@ import { EVENTS, useEventBusSubscriber } from "@travel-shop-app/utils";
 import { Suspense, lazy } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Product = lazy(() => import("@travel-shop-app/products").then((module) => ({ default: module.Product })));
+const Product = lazy(() => import("@travel-shop-app/products/ui").then((module) => ({ default: module.Product })));
 
 
 const BootstrapDialog = styled(Dialog)(({ theme }) => ({
