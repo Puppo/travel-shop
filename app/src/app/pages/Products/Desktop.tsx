@@ -1,10 +1,9 @@
 
 import { Box } from "@mui/material";
-import { Suspense, lazy } from "react";
+import { Basket } from "@travel-shop-app/basket/ui";
+import { ProductList } from "@travel-shop-app/products/ui";
+import { Suspense } from "react";
 import { useOutlet } from "react-router-dom";
-
-const Basket = lazy(() => import("@travel-shop-app/basket/ui").then((module) => ({ default: module.Basket })));
-const Products = lazy(() => import("@travel-shop-app/products/ui").then((module) => ({ default: module.ProductList })));
 
 export default function DesktopProductsPage() {
   const outlet = useOutlet();
@@ -17,7 +16,7 @@ export default function DesktopProductsPage() {
     <Box sx={{
       flex: 1
     }}>
-      <Products />
+      <ProductList />
     </Box>
 
     <Box sx={{

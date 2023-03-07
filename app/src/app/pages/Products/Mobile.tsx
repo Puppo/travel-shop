@@ -1,12 +1,7 @@
 
-import { Loader } from "@travel-shop-app/shared/ui";
 import { EVENTS, useEventBusSubscriber } from "@travel-shop-app/utils";
-import { ReactElement, Suspense, lazy, useEffect, useState } from "react";
+import { ReactElement, useEffect, useState } from "react";
 import { useOutlet } from "react-router-dom";
-
-const Basket = lazy(() => import("@travel-shop-app/basket/ui").then((module) => ({ default: module.Basket })));
-const BasketMobile = lazy(() => import("@travel-shop-app/basket/ui").then((module) => ({ default: module.BasketMobile })));
-const Products = lazy(() => import("@travel-shop-app/products/ui").then((module) => ({ default: module.ProductList })));
 
 
 export default function MobileProductsPage(): ReactElement | null {
@@ -34,14 +29,10 @@ export default function MobileProductsPage(): ReactElement | null {
 
   switch (view) {
     case 'products':
-      return <Suspense fallback={<Loader />}>
-        <Products />
-      </Suspense>
+      return
     case 'product':
       return outlet;
     case 'basket':
-      return <Suspense fallback={<Loader />}>
-        <BasketMobile />
-      </Suspense>
+      return
   }
 }

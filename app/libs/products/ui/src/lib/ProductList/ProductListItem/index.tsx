@@ -30,13 +30,13 @@ export function ProductListItem({ item }: ProductListItemProps) {
       flexDirection: 'row',
     }}>
       <picture>
-        <source type='image/webp' src={item.image} />
+        <source type='image/webp' srcSet={item.image} />
         <img
           loading='lazy'
           width='150px'
           height='150px'
           style={{ height: 'auto', objectFit: 'cover' }}
-          src={item.image}
+          srcSet={item.image}
           decoding='async'
           alt={item.title}
         />
