@@ -7,8 +7,11 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import { Price } from "@travel-shop-app/shared/ui";
 import { useTranslation } from 'react-i18next';
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 import LinesEllipsis from 'react-lines-ellipsis';
 import { Link } from "react-router-dom";
+
+import placeHolderImage from './placeholder.jpeg';
 
 
 import { Product } from "@travel-shop-app/products/models";
@@ -31,10 +34,12 @@ export function ProductListItem({ item }: ProductListItemProps) {
     }}>
       <picture>
         <source type='image/webp' srcSet={item.image} />
-        <img
+        <LazyLoadImage
           loading='lazy'
           width='150px'
           height='150px'
+          effect='blur'
+          placeholderSrc={placeHolderImage}
           style={{ height: 'auto', objectFit: 'cover' }}
           srcSet={item.image}
           decoding='async'
