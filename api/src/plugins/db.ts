@@ -23,8 +23,8 @@ const DB: Db = {
   products: Array.from(
     {
       length: faker.datatype.number({
-        min: 30,
-        max: 50,
+        min: 10,
+        max: 30,
       }),
     },
     (_, i) => ({

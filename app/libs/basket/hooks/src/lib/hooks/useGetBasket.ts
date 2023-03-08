@@ -1,4 +1,4 @@
-import { useQuery, useQueryClient } from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 import { Basket } from '@travel-shop-app/basket/models';
 import { httpClient } from '@travel-shop-app/utils';
 import { useEffect } from 'react';
@@ -27,9 +27,9 @@ interface UseGetBasketResult {
 }
 
 export function useGetBasket(): UseGetBasketResult {
-  const queryClient = useQueryClient();
-
   const {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     data: basket,
     isLoading,
     error,
@@ -37,7 +37,7 @@ export function useGetBasket(): UseGetBasketResult {
     isLoading: boolean;
     data?: Basket | null;
     error?: unknown;
-  } = useQuery(
+  } = useQuery<Basket | null>(
     [QUERY_KEYS.BASKET],
     ({ signal }) => getBasketRequest(basket, signal),
     {

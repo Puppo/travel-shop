@@ -11,6 +11,8 @@ server.register(import("@fastify/static"), {
   prefix: "/public/",
 });
 
+server.register(require("fastify-modern-images"), { quality: 7 });
+
 server.register(autoLoad, {
   dir: `${__dirname}/plugins`,
 });

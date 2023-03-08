@@ -23,6 +23,7 @@
     "@fastify/type-provider-typebox": "^2.4.0",
     "@sinclair/typebox": "^0.25.24",
     "fastify": "^4.14.0",
+    "fastify-modern-images": "^0.3.0",
     "fastify-plugin": "^4.5.0"
   }
 }

@@ -32,20 +32,17 @@ export function ProductListItem({ item }: ProductListItemProps) {
       display: 'flex',
       flexDirection: 'row',
     }}>
-      <picture>
-        <source type='image/webp' srcSet={item.image} />
-        <LazyLoadImage
-          loading='lazy'
-          width='150px'
-          height='150px'
-          effect='blur'
-          placeholderSrc={placeHolderImage}
-          style={{ height: 'auto', objectFit: 'cover' }}
-          srcSet={item.image}
-          decoding='async'
-          alt={item.title}
-        />
-      </picture>
+      <LazyLoadImage
+        loading='lazy'
+        width='150px'
+        height='150px'
+        effect='blur'
+        placeholderSrc={placeHolderImage}
+        style={{ height: 'auto', objectFit: 'cover' }}
+        srcSet={item.image}
+        decoding='async'
+        alt={item.title}
+      />
       <CardContent sx={{
         flex: 1
       }}>
