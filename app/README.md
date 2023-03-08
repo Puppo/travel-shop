@@ -15,6 +15,6 @@ nr start
 ## Start in production mode
 
 ```bash
-nr build -- --configuration=production
+nr build --configuration=production
 nr preview
 ```

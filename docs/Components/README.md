@@ -65,7 +65,7 @@ The approach for the mobile version is a bit different. The route is the same, b
 ## Event Bus
 
 The Event Bus is not a visual component but it's important for sending events between components.
-In this case, the application use the Event bus to toggle the basket view in the mobile version.
+In this case, the application uses the Event bus to toggle the basket view in the mobile version.
 
 ## Component Relationships
 

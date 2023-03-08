@@ -41,4 +41,4 @@ You can find a prototype of the project in the folder app.
 
 To run the project, you need to run the [app](../app/README.md) and [api](../api/README.md) projects.
 
-p.s. if you kill the api you have to clear the local storage of the browser otherwise the are problem with the basket, becuase the basket is stored in the local storage and in the memory in the fake api
+p.s. if you kill the api you have to clear the local storage of the browser otherwise the are problems with the basket, because the basket is stored in the local storage and in the memory in the fake api
