@@ -10,20 +10,15 @@ import MenuItem from '@mui/material/MenuItem';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import { useGetBasket } from '@travel-shop-app/basket/hooks';
-import { EVENTS, LANGUAGES, useEventBusEmitter } from '@travel-shop-app/utils';
+import { LANGUAGES, Language } from '@travel-shop-app/utils';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 export function AppBar() {
   const { t, i18n: { changeLanguage } } = useTranslation(['common']);
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
   const { basket } = useGetBasket();
-
-  const { emit: emitToBus } = useEventBusEmitter();
-
-  const handleBasketClick = () => {
-    emitToBus(EVENTS.NAVIGATION.BASKET.TOGGLE);
-  }
 
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorEl(event.currentTarget);
@@ -59,7 +54,8 @@ export function AppBar() {
             size="large"
             aria-label={t('appBar.basketCount', { total: basket?.items?.length || 0 })!}
             color="inherit"
-            onClick={handleBasketClick}
+            component={Link}
+            to="/basket"
           >
             <Badge badgeContent={basket?.items?.length} color="error">
               <ShoppingCartIcon />

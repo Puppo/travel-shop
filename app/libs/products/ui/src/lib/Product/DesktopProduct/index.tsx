@@ -15,7 +15,7 @@ const BootstrapDialog = styled(Dialog)(({ theme }) => ({
 }));
 
 
-export function DesktopProductPage() {
+export function DesktopProduct() {
   const navigate = useNavigate();
 
   useEventBusSubscriber(EVENTS.PRODUCT.ADDED, () => {

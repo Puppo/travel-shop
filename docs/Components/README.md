@@ -56,16 +56,18 @@ For this scenario, the best route implementation is something like this:
 
 1.  /products -> Product List
 2.  /products:/id --> Product Detail
+3.  /basket --> Basket (only in the mobile version) in desktop version, the basket route redirects to the product list route
 
-The second route is nested in the first one. This is because the product detail view is a modal in the desktop version. Doing this, we can visualize the product list in the background. In this case, the basket component is part of the Product List page.
-The approach for the mobile version is a bit different. The route is the same, but the product list page must work differently and handle the views to show only the right one for the user. To achieve this, the product list page must check the route and show the product detail in case the route is equal to `/products/:id`, show the product list in case the route is equal to `/products` and show the basket in case the user toggle the basket view from the navbar.
+The second route (in the desktop version) is nested in the first one. This is because the product detail view is a modal in the desktop version. Doing this, we can visualize the product list in the background. In this case, the basket component is part of the Product List page.
+The approach for the mobile version is a bit different.
+Each component has its own route and the shell component is responsible for handling the right view to show right component in base on the route.
 <br />
 <br />
 
 ## Event Bus
 
 The Event Bus is not a visual component but it's important for sending events between components.
-In this case, the application uses the Event bus to toggle the basket view in the mobile version.
+In this case, the application uses the Event bus to notify when a product is added in the basket, so the view can change from the detail to the list.
 
 ## Component Relationships
 

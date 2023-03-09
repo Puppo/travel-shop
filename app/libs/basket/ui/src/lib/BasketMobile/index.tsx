@@ -1,17 +1,11 @@
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { EVENTS, useEventBusEmitter } from '@travel-shop-app/utils';
-import { useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 import { Basket } from '../Basket';
 
 export function BasketMobile() {
   const { t } = useTranslation('common');
-  const { emit: sendMessageToBus } = useEventBusEmitter();
-
-  const onGoBack = useCallback(() => {
-    sendMessageToBus(EVENTS.NAVIGATION.BASKET.TOGGLE);
-  }, [sendMessageToBus]);
 
   return (
     <Box>
@@ -26,7 +20,8 @@ export function BasketMobile() {
         }}
       >
         <Button
-          onClick={onGoBack}
+          component={Link}
+          to="/products"
           variant="outlined"
           size="large"
           color="primary"

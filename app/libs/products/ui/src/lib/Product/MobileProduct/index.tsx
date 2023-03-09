@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { Product } from "../Product";
 
-export function MobileProductPage(): ReactElement | null {
+export function MobileProduct(): ReactElement | null {
   const { t } = useTranslation('common');
 
   return <Box

@@ -1,11 +1,11 @@
 
 import { Box } from "@mui/material";
 import { Basket } from "@travel-shop-app/basket/ui";
-import { ProductList } from "@travel-shop-app/products/ui";
 import { Suspense } from "react";
 import { useOutlet } from "react-router-dom";
+import { ProductList } from "../ProductList";
 
-export default function DesktopProductsPage() {
+export function DesktopProductList() {
   const outlet = useOutlet();
 
   return <Box sx={{
